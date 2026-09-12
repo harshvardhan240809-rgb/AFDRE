@@ -1,6 +1,6 @@
-// Environment variable se Backend URL uthayega, production fallback Railway backend rahega
 
-const API\_BASE = 'https://afdre-production.up.railway.app
+const API_BASE = 'https://afdre-production.up.railway.app'
+
 async function request<T>(path: string, method = 'GET', body?: unknown): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
     method,
