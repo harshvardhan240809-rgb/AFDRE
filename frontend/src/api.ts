@@ -1,4 +1,5 @@
-const API_BASE = 'http://127.0.0.1:8000'
+// Environment variable se Backend URL uthayega, local dev ke liye fallback 127.0.0.1:8000 rahega
+const API_BASE = import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
 
 async function request<T>(path: string, method = 'GET', body?: unknown): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
